@@ -1,0 +1,158 @@
+/*man*/
+.man{ 
+	position: fixed;
+	top: 120%;
+	left: 50%;
+	margin-left: -75px;
+	margin-top: -100px; 
+	z-index: 1; 
+	transition: 1s ease;
+}
+
+.face{
+	position: relative;
+	height: 200px;
+	width: 165px;
+	background: #6BACE3;
+	border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+ 
+.eye{
+  position: absolute;
+  top: 40px; 
+  left: 50%;
+  margin-left: -30px;
+  width: 80px; 
+}
+
+.left-eye,.right-eye{ 
+	display: inline-block;
+	position: relative;
+	width: 20px;
+	height: 35px;
+	background: #000;
+	border-radius: 150% 150% 150% 150%;
+}
+
+.left-eye:before,.right-eye:before{
+	content: "";
+	display: block;
+	position: absolute;
+	right: 4px;
+	top: 8px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #fff;
+}
+
+.mouth{
+	position: absolute;
+	top: 90px;
+	left: 70px; 
+	background: #000;
+	width: 20px;
+	height: 20px;
+	border-radius: 40%;
+	transition-origin:50% 50%;
+	transition:1s ease 1s;
+}
+
+.mouth-expand{ 
+	left: 40px; 
+	width: 80px;
+	height: 40px;
+	border-radius: 0 0 40px 40px; 
+}
+
+.hand{
+	position: absolute;
+	top: 100px; 
+	width: 155px;
+}
+
+.left-hand,.right-hand{ 
+	position: relative;
+	height: 80px;
+	width: 5px;
+	background: #6BACE3;
+	border-radius: 15px; 
+}
+
+.left-hand{
+	float: left;
+	transform-origin:100% 0; 
+	transform:rotate(150deg);
+}
+
+.right-hand{
+	float: right;
+	transform-origin:100% 0; 
+	transform:rotate(-130deg);
+}
+
+.foot{
+	position: absolute;
+	top: 195px;
+	left: 50%;
+	margin-left: -25px;
+	bottom: 0px;
+	width: 50px;
+}
+
+.left-foot,.right-foot{ 
+	width: 5px;
+	height: 50px;
+	background: #6BACE3; 
+	position: relative;
+	transition:.2s ease .5s;
+}
+
+.left-foot{
+	float: left; 
+	transform:rotate(-40deg);
+	transform-origin:100% 0;
+}
+
+.right-foot{
+	float:right; 
+	transform:rotate(-40deg);
+	transform-origin:100% 0;
+}
+
+
+.left-foot:after,.right-foot:after{
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	width: 20px;
+	height: 5px;
+	background: #6BACE3;
+	border-radius: 10px; 
+}
+
+/*man actions*/
+
+.man.fall{
+	top: calc(200% -  180px); 
+}
+
+.foot-stand{
+  transform: rotate(0deg); 
+}
+
+ 
+.man.fall-again{
+	top: calc(300% - 200px);
+	left: calc((100% - 700px)/2);
+ }
+
+.man.fall-again-a{
+	top: calc(400% - 250px - 80px);
+	left: 170px;
+ }
+
+ .man.fall-again-a-f{
+	top: 420%;
+ }

@@ -1,0 +1,332 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+    font-family: 'damionregular';
+    src: url('../font/Damino/damion-regular-webfont.eot');
+    src: url('../font/Damino/damion-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Damino/damion-regular-webfont.woff2') format('woff2'),
+         url('../font/Damino/damion-regular-webfont.woff') format('woff'),
+         url('../font/Damino/damion-regular-webfont.ttf') format('truetype'),
+         url('../font/Damino/damion-regular-webfont.svg#damionregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'futura';
+    src: url('../font/Futura/futura-book-webfont.eot');
+    src: url('../font/Futura/futura-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Futura/futura-book-webfont.woff2') format('woff2'),
+         url('../font/Futura/futura-book-webfont.woff') format('woff'),
+         url('../font/Futura/futura-book-webfont.ttf') format('truetype'),
+         url('../font/Futura/futura-book-webfont.svg#futura_bookregular') format('svg');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'coming_soonregular';
+    src: url('../font/ComingSoon/comingsoon-webfont.eot');
+    src: url('../font/ComingSoon/comingsoon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/ComingSoon/comingsoon-webfont.woff2') format('woff2'),
+         url('../font/ComingSoon/comingsoon-webfont.woff') format('woff'),
+         url('../font/ComingSoon/comingsoon-webfont.ttf') format('truetype'),
+         url('../font/ComingSoon/comingsoon-webfont.svg#coming_soonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*same*/
+.introduce,.skill,.program,.thank{
+	font-family: 'futura';
+} 
+
+/*start*/
+.start{  
+	background-image: url(../img/starfallloop.gif);
+	background-size: cover;
+}
+
+.start p{
+	font-family: 'damionregular';
+	color: #fff;
+	font-size: 60px;
+	text-align: center;
+
+}
+
+ 
+/*introduce*/
+.introduce{
+	background: #B4D5C4;
+	font-family: 'Futura'; 
+	position: relative;
+}
+
+.intro-introduce{ 
+	top: calc(100% - 450px);
+	left: 32%; 
+}
+
+.intro-skill{
+	top: 45%;
+	left: 50px;
+}
+
+.intro-program{
+	top: calc(100% - 250px - 300px  );
+	left: 50px;
+}
+
+.intro { 
+	position: absolute;  
+	background: #f6f6f6;
+	padding: 20px 10px 20px 10px;
+	border-radius: 15px; 
+	transform: scale(0);
+	transition: 1s ease;
+}
+
+.intro:before{
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: -10px;
+	left: 40px;
+	width: 30px;
+	height: 30px;
+	background: #F6F6F6;
+	transform:rotate(-45deg);
+}
+
+.intro p{
+	color: #000;
+	font-size: 25px;  
+}
+
+.intro-flash{
+	animation: intro-flash 2s ease 2s; 
+	-webkit-animation: intro-flash 2s ease 2s;
+	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards;
+}
+
+.shadow{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -30px;
+	width: 0px;
+	height: 0px;
+	border-radius: 100px / 50px;
+	background:RGBA(146,146,146,.3);
+	transform-origin:center;
+	transition:1.5s linear;
+}
+
+.shadow.big{
+   width: 200px;
+   height: 100px;
+}
+
+
+/*skill*/
+
+.skill{
+	background: #D4BE9E; 
+	position: relative;
+}
+
+.blackboard{
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	margin-top: -150px;
+	margin-left: -350px;
+	width: 700px;
+	height: 300px; 
+	border:10px solid #F7E3AE;
+	border-radius: 5px;
+	background: #293B2A; 
+}
+
+.brush{
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  right: 5px;
+  bottom: 0px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.brush:before{
+	content: "";
+	display: block;
+	width: 53px;
+	height: 10px;
+	position: absolute;
+	background: #AC8C55;
+	margin-left: -2px;
+	border-radius:3px;
+}
+
+.board-content{
+	font-family: 'coming_soonregular';
+	font-size: 30px;
+	color: #fff;
+}
+
+.board-content h2{
+  text-align: center;
+}
+
+.board-content li{ 
+	list-style:none; 
+	border-top: 2px solid #fff;
+}
+
+.board-content ul{
+	width: 500px; 
+	margin: 0 auto;
+}
+
+.board-content .title{
+	display: inline-block;
+	width: 200px;
+	text-align: center;
+	border-right: 2px solid #fff;
+}
+
+ 
+
+/*program*/
+.program{
+	 
+	position: relative;
+	display: flex;
+	background: url(../img/space-bg.png) repeat;
+}
+
+.earth{
+	position: absolute;
+	bottom: 50px;
+	left: 50px;
+	width: 200px;
+	height: 200px;
+	background-image: url(../img/earth.png);
+	border-radius: 50%; 
+
+}
+
+.mercury{
+	position: absolute;
+	right: 50px;
+	top: 30px; 
+	width: 230px;
+	height: 230px;
+	border-radius: 50%;
+	background-image: url(../img/mercury.png) ;
+	transform-origin: 50% 50%;
+	animation: mercury 20s linear infinite; 
+	-webkit-animation: mercury 20s linear infinite;  
+}
+ 
+
+.jupiter{
+	position: absolute;
+	right: 200px;
+	bottom: 10px;
+	width: 250px;
+	height: 227px;
+	background-image: url(../img/jupiter.png);
+	transform-origin:50% 50%; 
+}
+
+.pluto{
+	position: absolute;
+	top: 100px;
+	left: 38%;
+	width: 150px;
+	height: 150px;
+	background-image: url(../img/pluto.png);
+	transform-origin:50% 50%;
+	border-radius: 50%; 
+}
+
+#mask{
+	width: 100%;
+	height: 100%;
+	display: none;
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 998;
+
+}
+
+.program-introduce {
+	 font-family: '微软雅黑';
+	 position: relative;
+	 margin: auto;
+	 width: 500px;
+	 display: none;
+	 background: #F6F6F6;
+	 border-radius: 15px;
+	 padding: 20px;
+	 z-index: 999;   
+}
+
+.program-introduce h2{
+	border-bottom: 2px solid #000;
+	padding-bottom: 5px;
+}
+
+.program-introduce p{
+	line-height: 25px;
+}
+
+.close{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 20px;
+	height: 20px; 
+	color: #000; 
+	text-align: center;
+	cursor: pointer;
+}
+
+
+.spaceman{
+	position: absolute;
+	left: 30%;
+	top: 50%; 
+	transform-origin:50% 50%;
+	animation:spaceman 10s ease infinite;
+	-webkit-animation:spaceman 10s ease infinite;
+}
+
+/*thank*/
+.thank{
+	background: #71ACA8; 
+}
+
+.thank p{ 
+	color: #fff;
+	font-family: 'damionregular';
+	font-size: 50px;
+	text-align: center;   
+}
+
+.link p,.link a{
+	font-size: 30px;
+	text-decoration: none;
+	color: #fff;
+}
